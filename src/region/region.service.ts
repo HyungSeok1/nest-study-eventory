@@ -10,6 +10,6 @@ export class RegionService {
   async findAllRegions(): Promise<RegionListDto> {
     const regions: RegionData[] = await this.regionRepository.findAllRegions();
 
-    return RegionListDto.from(regions);
+    return RegionListDto.from(regions); //받은 데이터를 리스트로 변환
   }
 }
